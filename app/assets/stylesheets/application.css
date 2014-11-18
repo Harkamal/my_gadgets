@@ -13,9 +13,65 @@
  *= require_tree .
  *= require_self
  */
+ body{
+ 	padding: 5px;
+ }
 #pageContent{
 	padding-left: 20px;
 }
 .form-group{
 	width: 17%;
+}
+#searchForm{
+	float: right;
+}
+.search-btn{
+	margin-top: 11px;
+	margin-left: 110px;
+}
+.gadget-info-large{
+	width: 50%;
+	float: left;
+}
+.gadget-info-small{
+	width: 30%;
+	float: left;
+}
+.gadget-img{
+	width: 25%;
+	float: left;
+}
+.image-link{
+	width: 25%;
+	float: left;
+	margin-top: 210px;
+}
+.image-link-large{
+	width: 25%;
+	float: left;
+	margin-top: 310px;
+	margin-left: 122px;
+}
+.clear{
+	clear: both;
+	padding: 2px;
+}
+.add-gadget-btn{
+	float: left;
+}
+.gadget-detail{
+	float: left;
+	width: 5%;
+}
+.add-image{
+	float: left;
+	width: 5%;
+	margin-left: 92px;
+}
+.gadget-imgs{
+	width: 16%;
+	float: left;
+}
+.all-gadgets{
+	margin: 15px;
 }
