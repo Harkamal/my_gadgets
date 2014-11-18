@@ -4,12 +4,12 @@ A Ruby on Rails application for user's gadget collection.
 
 Technology Stack
 
-* Ruby version - 
+* Ruby version - 2.1.2
 
-* Rails Version - 
+* Rails Version - 4.1.6
 
 * Aunthentication using  - devise
 
-* Database - Sqlite3/mysql2/postgres
+* Database - sqlite3/mysql2/postgres
 
 * Test coverage - using rspec and capybara
