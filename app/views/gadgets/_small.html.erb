@@ -1,0 +1,13 @@
+<% @gadgets.each do |gadget| %>
+	<div class="gadget-info-small">
+		<h3><%=gadget.name %></h3>
+		<p><%= gadget.description.truncate(25, omission: '... (continued)') %></p>
+		<div class="gadget-img">
+			<%= image_tag gadget.images.last.file.thumbnail unless gadget.images.blank? %>
+		</div>
+		<div class="image-link">
+			<div class="gadget-detail"><%= link_to "View Detail", gadget_path(gadget), class: "btn btn-primary" %></div>
+			<div class="add-image"><%= link_to "add image", new_gadget_image_path(gadget), class: "btn btn-primary" %></div>
+		</div>
+	</div>
+<% end %>

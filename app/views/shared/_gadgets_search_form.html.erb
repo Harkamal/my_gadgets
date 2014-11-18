@@ -1,0 +1,9 @@
+<div id="searchForm">
+	<%= form_tag gadgets_path, method: 'get', class: 'navbar-form navbar-left' do %>
+		<div class="form-group">
+		  <%= text_field_tag :search, params[:search], class: 'form-control' %>
+		</div><br/>
+		<%= submit_tag "Search", name: nil, class: "btn btn-primary search-btn" %>
+	<% end %>
+</div>
+<div class="clear"></div>

@@ -1,6 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path %> </li>
         <% if current_user %>
           <li><%= link_to "logout", destroy_user_session_path, method: 'delete'  %> </li>
         <% else %>
@@ -12,3 +13,4 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<%= render "/shared/gadgets_search_form"  if current_user %>

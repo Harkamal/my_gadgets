@@ -1,0 +1,13 @@
+<h1>Gadget Detail: </h1>
+<div class="@gadget-info-small">
+	<h3>Name: <%=@gadget.name %></h3>
+	<p>Description<%= @gadget.description %></p>
+		<% @gadget.images.each do |image|%>
+			<div class="gadget-imgs">
+				<%= image_tag image.file.thumbnail %>
+			</div>
+		<% end %>
+	</div>
+</div>
+<div class="clear"></div>
+<%= link_to "All gadgets", gadgets_path, class: "btn btn-primary btn-lg all-gadgets" %>

@@ -1,0 +1,24 @@
+<h1>Add a new gadget</h1>
+
+<%= form_for(@gadget) do |f| %>
+  <% if @gadget.errors.any? %>
+    <ul>
+      <% @gadget.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, required: true, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Submit', class: 'btn btn-default' %>
+  </div>
+<% end %>
+

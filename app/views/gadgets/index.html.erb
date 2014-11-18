@@ -1,0 +1,12 @@
+<div class="btn-group">
+  <%= link_to "List Mode(Small)", gadgets_path(view_mode: 'small'), class: "btn btn-default" %>
+  <%= link_to "List Mode(Large)", gadgets_path(view_mode: 'large'), class: "btn btn-default" %>
+  <%= link_to "Coverflow", gadgets_path(view_mode: 'coverflow'), class: "btn btn-default" %>
+</div>
+<h2>Gadget collection</h2>
+<% if current_user %>
+  <%= link_to 'Add a new Gadget', new_gadget_path, class: "btn btn-primary add-gadget-btn" %>
+<% end %>
+<div class="clear"></div>
+<%= render(params[:view_mode] || 'small') %>
+
