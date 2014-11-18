@@ -1,9 +1,15 @@
 source 'https://rubygems.org'
 
+# use carrierwave
+gem 'carrierwave', '~> 0.9.0'
 # Use devise for authentication
 gem 'devise'
 
+gem 'mini_magick', '~> 3.5.0'
 gem 'minitest'
+
+gem 'jquery-fileupload-rails', '~> 0.4.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
