@@ -1,0 +1,8 @@
+<div class="gadgets">
+  <h1>Welcome to My Gadgets</h1>
+  <% if current_user %>
+    <p>Welcome <%#= current_user.username %></p>
+  <% else %>
+    <p>Please Log in or Sign up to manage your gadgets.</p>
+  <% end %>
+</div>
