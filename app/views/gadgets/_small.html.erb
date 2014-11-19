@@ -1,13 +1,28 @@
-<% @gadgets.each do |gadget| %>
-	<div class="gadget-info-small">
-		<h3><%=gadget.name %></h3>
-		<p><%= gadget.description.truncate(25, omission: '... (continued)') %></p>
-		<div class="gadget-img">
-			<%= image_tag gadget.images.last.file.thumbnail unless gadget.images.blank? %>
-		</div>
-		<div class="image-link">
-			<div class="gadget-detail"><%= link_to "View Detail", gadget_path(gadget), class: "btn btn-primary" %></div>
-			<div class="add-image"><%= link_to "add image", new_gadget_image_path(gadget), class: "btn btn-primary" %></div>
-		</div>
-	</div>
-<% end %>
+<div class="container">
+    <div id="products" class="row list-group">
+        <% @gadgets.each do |gadget| %>
+            <div class="item  col-xs-4 col-lg-4">
+                <div class="thumbnail">
+                    <%= image_tag(gadget.images.last.file.thumbnail, class: "group list-group-image") unless gadget.images.blank? %>
+                    <div class="caption">
+                        <h4 class="group inner list-group-item-heading">
+                            <%=gadget.name %>
+                        </h4>
+                        <p class="group inner list-group-item-text">
+                            <%= gadget.description.truncate(40, omission: '... (continued)') %>
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    <%= link_to "View Detail", gadget_path(gadget), class: "btn btn-primary" %></p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <%= link_to "add image", new_gadget_image_path(gadget), class: "btn btn-primary" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
